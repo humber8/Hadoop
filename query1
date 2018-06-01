@@ -1,0 +1,8 @@
+## An ́alisis de las evaluaciones de los productos
+
+    SELECT  p.prod_id,p.name,min(r.rating) rating
+    FROM products p join ratings r on p.prod_id= r.prod_id
+    group by p.prod_id,p.name
+    order by rating desc
+    limit 10
+    
